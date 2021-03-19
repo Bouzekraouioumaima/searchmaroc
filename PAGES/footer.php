@@ -4,6 +4,7 @@
                     <div class="col-lg-8 offset-lg-2">
                         <div class="widget">
                             <div class="footer-text text-center">
+                       
                                 <a href="index.html"><img src="../image/logo.png" alt="" class="img-fluid"></a>
                                 <p>Contactez-nous sur </p>
                                 <div class="social">

@@ -1,32 +1,55 @@
 <?php
 include_once('connection.php');
+include 'header.php';
 ?>
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" href="../CSS/stylecategorie.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core css -->
+    <link href="../css/acceuil/bootstrap.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons core css -->
+    <link href="../css/acceuil/font-awesome.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="../css/acceuil/style.css" rel="stylesheet">
+
+    <!-- Colors for this template -->
+    <link href="../css/acceuil/colors.css" rel="stylesheet">
+
+    <!-- Version Garden css for this template -->
+    <link href="../css/acceuil/garden.css" rel="stylesheet">
 </head>
 <body>
-
-<?php 
-        $sql = "SELECT * FROM categorie ORDER BY id DESC";
-        $res = mysqli_query($con,  $sql);
-        if (mysqli_num_rows($res) > 0) {?>
-            <div class="catbody">
-                    <?php	while ($images = mysqli_fetch_assoc($res)) {  ?>
-                        <a href="http://www.azidem.com/transfert-professionnel.html" style="text-decoration: none;">
-                            <div class="alb" style="background-image: url('../<?=$images['image_categorie']?>');     background-size: cover;">
-                                <p class="type"><?= $images['type'];?> </p>
-                            </div>
-                        </a>
-                    <?php } ?>
-                </div>
+<section class="section first-section">
+            <div class="container-fluid">
+                <div class="masonry-blog clearfix">
+                <?php 
+                    $sql = "SELECT * FROM categorie ORDER BY id DESC";
+                    $res = mysqli_query($con,  $sql);
+                    if (mysqli_num_rows($res) > 0) { 
+                        while ($images = mysqli_fetch_assoc($res)) { 
+                        ?>
+                    <div class="left-side">
+                        <div class="masonry-box post-media">
+                             <img class="imgart" src="../uploadimg/<?=$images['image_categorie']?>" alt="" class="img-fluid">
+                             <div class="shadoweffect">
+                                <div class="shadow-desc">
+                                    <div class="blog-meta">
+                                        <h4><a href="#" title="" style="font-size: 50px;"><?= $images['type']?></a></h4>
+                                    </div><!-- end meta -->
+                                </div><!-- end shadow-desc -->
+                            </div><!-- end shadow -->
+                        </div><!-- end post-media -->
+                    </div><!-- end left-side -->
+                    
+                    <?php }}?>
+                </div><!-- end masonry -->
             </div>
-        <?php }?>
-    </div>
-    </div>
+        </section>
+
+    <?php include_once('footer.php');?>
 </body>
 </html>

@@ -19,20 +19,20 @@ include_once('header.php');
     <!-- Design fonts -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"> 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-    <link href="../CSS/acceuil/bootstrap.css" rel="stylesheet">
-
-    <!-- FontAwesome Icons core CSS -->
-    <link href="../CSS/acceuil/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core css -->
+    <link href="../css/acceuil/bootstrap.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons core css -->
+    <link href="../css/acceuil/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../CSS/acceuil/style.css" rel="stylesheet">
+    <link href="../css/acceuil/style.css" rel="stylesheet">
 
     <!-- Colors for this template -->
-    <link href="../CSS/acceuil/colors.css" rel="stylesheet">
+    <link href="../css/acceuil/colors.css" rel="stylesheet">
 
-    <!-- Version Garden CSS for this template -->
-    <link href="../CSS/acceuil/garden.css" rel="stylesheet">
+    <!-- Version Garden css for this template -->
+    <link href="../css/acceuil/garden.css" rel="stylesheet">
 </head>
 <body>
 
@@ -59,7 +59,7 @@ include_once('header.php');
                         ?>
                     <div class="left-side">
                         <div class="masonry-box post-media">
-                             <img class="imgart" src="../<?=$images['image_article']?>" alt="" class="img-fluid">
+                             <img class="imgart" src="../uploadimg/<?=$images['image_article']?>" alt="" class="img-fluid">
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
@@ -93,7 +93,7 @@ include_once('header.php');
                                     <div class="col-md-4">
                                         <div class="post-media">
                                             <a href="garden-single.html" title="">
-                                                <img src="../<?= $images['image_article']?>" alt="" class="img-fluid" style="height: 100%;">
+                                                <img src="../uploadimg/<?= $images['image_article']?>" alt="" class="img-fluid" style="height: 100%;">
                                                 <div class="hovereffect"></div>
                                             </a>
                                         </div><!-- end media -->

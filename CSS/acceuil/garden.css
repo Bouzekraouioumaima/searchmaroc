@@ -149,7 +149,8 @@ a:focus,
 .navbar-nav .nav-link.active.color-green-hover,
 .navbar-nav .nav-link.color-green-hover:hover,
 .navbar-nav .nav-link.color-green-hover:focus {
-    color: #f10909  !important;
+    color: #ab0505 !important;
+    text-decoration: none;
 }
 @media (max-width: 1156px) {
     .small-box .shadow-desc h4 {

@@ -1,0 +1,39 @@
+table {
+       /* display: flex; */
+       justify-content: center;
+       width: 88%;
+       margin-left: 41px;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: content-box;
+  }
+  td {
+    font-size: 18px;
+}
+
+.submit {
+    width: 28%;
+    background-color: #23922e;
+    color: white;
+    padding: 14px 20px;
+    margin: 13px 44px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: auto;
+    /* margin-top: 18px; */
+    display: block;
+  }
+  
+  .submit:hover {
+    background-color: #45a049;
+  }
+  *[class*="grid-width"] {
+    margin-bottom: 31px;
+}

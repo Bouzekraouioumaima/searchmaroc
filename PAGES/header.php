@@ -1,3 +1,6 @@
+<?php
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +14,11 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #ab0505;
+  background-color: #013d1b;
+  MARGIN-BOTTOM: 15PX;
+  width: 100%;
+
+  z-index: 99;
 }
 
 .topnav a {
@@ -29,19 +36,25 @@ body {
 }
 
 .topnav a:hover {
-  color: #112b1d;
+  color: #ab0505 !important;
 }
 
 .topnav .icon {
   display: none;
 }
-
+.menu {
+    display: flex;
+    justify-content: center;
+}
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
+  .menu {
+    display: block;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -59,20 +72,41 @@ body {
 
 }
 </style>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
-<a href="index.html" style="    margin: 0 !important;"><img src="../image/logo.png" alt="Blog maroc" style="width: 100px;"></a>
-  <a href="#home" >Acceuil</a>
-  <a href="#news">Categorie</a>
-  <a href="#contact">profil</a>
-  <a href="#about">Inscrire</a>
-  <a href="#about">Identifier</a>
-  <a href="#about">Deconnecter</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+  
+    <?php  if ( !isset($_SESSION["user"])) {?>
+      <a><img src="../image/icon1.png" style="width: 40px;margin-bottom:20px"></a>
+    <?php } else {
+      if ($_SESSION['user']['image']!="") {
+        $uploads="../uploadimg/".$_SESSION['user']['image'];
+      }else {
+        $uploads="../uploadimg/empty.jpg";
+      }
+     ?> 
+     <div class="menu">
+      <a><img src="<?php echo $uploads; ?>" style="width: 40px;margin-bottom:10px;border-radius: 50%; HEIGHT: 40PX;OBJECT-FIT: cover;"></a>
+    <?php } ?>
+    
+      <a class="lien" href="acceuil.php"><i class="fas fa-home"></i> Acceuil</a>
+      <a class="lien"href="categorie.php"><i class="fab fa-blogger"></i> Catégories</a>
+      <?php  if ( !isset($_SESSION["user"])) {?>
+          <a class="lien" href="login.php"><i class="fas fa-sign-in-alt"></i> S'identifier</a>
+          <a  class="lien" href="inscription.php"><i class="fas fa-prescription-bottle-alt"></i> S'inscrire</a>
+      <?php } else {?>
+          <a  class="lien" href="profil.php"><i class="fas fa-users"></i> Profil</a>
+          <a  class="lien" href="myblogs.php"><i class="fas fa-feather-alt"></i> My Blogs</a>
+          <a  class="lien" href="add_article.php"><i class="fas fa-plus-circle"></i> </a>
+          <a  class="lien" href="login.php"><i class="fas fa-sign-out-alt"></i> Déconnection</a>
+      <?php } ?>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
 </div>
 
 

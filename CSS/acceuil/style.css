@@ -1,6 +1,6 @@
 /**************************************
     Table of Content
-    
+
     1. BASIC
     2. HEADER
     3. SECTION
@@ -10,7 +10,7 @@
     7. WIDGETS
 **************************************/
 
-/* BASIC 
+/* BASIC
 **************************************/
 
 body {
@@ -121,7 +121,7 @@ a {
 }
 
 
-/* HEADER 
+/* HEADER
 **************************************/
 
 .header {
@@ -692,7 +692,7 @@ img.imgart {
 }
 
 
-/* PAGES 
+/* PAGES
 **************************************/
 
 .notfound h2 {
@@ -826,7 +826,7 @@ img.imgart {
 }
 
 
-/* BLOG 
+/* BLOG
 **************************************/
 
 .carousel-indicators li {
@@ -1192,6 +1192,7 @@ hr.invis3 {
 .shadow-desc .blog-meta a,
 .shadow-desc .blog-meta h4 a {
     color: #ffffff !important;
+    
 }
 
 .small-box .shadow-desc h4 {
@@ -1315,7 +1316,7 @@ hr.invis3 {
 }
 
 
-/* WIDGETS 
+/* WIDGETS
 **************************************/
 
 .sidebar .widget {
