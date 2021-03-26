@@ -65,12 +65,22 @@ class functions
     $pass = $_POST['pass'];
     $date_naiss = $_POST['date_naiss'];
     $image=$this->uploadimg($nom);
+    //test email 
+    $sqltest="SELECT * FROM user WHERE email = '$email'";
+    $test=mysqli_query($con, $sqltest);
+    $row=mysqli_num_rows($test);
+    if($row!=0){
+      header("Location: login.php");
+      exit();
+    }
     $sql = 'INSERT INTO user(nom, prenom,username,email,pass,image,date_naiss)
-    VALUES ("'.$nom.'","'.$prenom.'","'.$username.'","'.$email.'","'.md5($pass).'", "'.$image.'","'.$date_naiss.'")';
+    VALUES ("'.$nom.'","'.$prenom.'","'.$username.'","'.$email.'","'.$pass.'", "'.$image.'","'.$date_naiss.'")';
 
       if ($con->query($sql) === TRUE) {
-
-                  echo "its added";
+           
+                header("Location: login.php");
+                exit();
+          
       }
 }
 public function add_article()

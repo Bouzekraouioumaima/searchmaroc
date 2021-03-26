@@ -25,7 +25,7 @@ include 'header.php';
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Site Metas -->
-<title>Blog / Maroc</title>
+<title>BLOG MAROC | MES BLOG</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">

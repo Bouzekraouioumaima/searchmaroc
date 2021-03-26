@@ -3,7 +3,7 @@ include_once('connection.php');
 include_once('header.php');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@ include_once('header.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Site Metas -->
-    <title>Blog / Maroc</title>
+    <title>BLOG MAROC | ACCEUIL </title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">

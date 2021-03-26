@@ -2,9 +2,7 @@
 
 if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 	include_once('connection.php');
-	echo "<pre>";
-	print_r($_FILES['my_image']);
-	echo "</pre>";
+	
 	$img_name = $_FILES['my_image']['name'];
 	$img_size = $_FILES['my_image']['size'];
 	$tmp_name = $_FILES['my_image']['tmp_name'];
@@ -24,19 +22,24 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 				$new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
 				$img_upload_path = '../uploadimg/'.$new_img_name;
 				move_uploaded_file($tmp_name, $img_upload_path);
-				
+				session_start();
 				$titre=$_POST['titre'];
 				$sous_titre=$_POST['sous_titre'];
-				$content=$_POST['editor'];
-				$utilisateur = 1;
-				$categorie=2;
+				$description=addslashes($_POST['description']);
+				$utilisateur = $_SESSION["user"]["id"];
+				$categorie=$_POST['categorie'];
 				$image=$new_img_name;
+				$sql="SELECT * FROM categorie where type ='$categorie'";
+				$re = mysqli_query($con , $sql);
+				while($resultat = mysqli_fetch_assoc($re)){
+					$idcategorie=$resultat['id'];
+				}
 				$sqll="INSERT INTO article ( titre,sous_titre,id_utilisateur,id_categorie,texte,image_article) VALUES
-				( '$titre', '$sous_titre','$utilisateur', '$categorie','$content','$image')";
+				( '$titre', '$sous_titre','$utilisateur', '$idcategorie','$description','$image')";
 				if(mysqli_query($con,$sqll)){
-					echo 'good';
+					header("Location: acceuil.php");
 				}else{
-					echo 'erreur';
+					header("Location: add_article.php?$idcategorie");
 				}
 		    }
 		}

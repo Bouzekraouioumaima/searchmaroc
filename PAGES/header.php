@@ -17,7 +17,6 @@ body {
   background-color: #013d1b;
   MARGIN-BOTTOM: 15PX;
   width: 100%;
-
   z-index: 99;
 }
 
@@ -33,6 +32,7 @@ body {
     font-size: 27px;
     padding-bottom: 0;
     padding-top: 5px;
+   
 }
 
 .topnav a:hover {
@@ -79,29 +79,33 @@ body {
 
 <div class="topnav" id="myTopnav">
   
-    <?php  if ( !isset($_SESSION["user"])) {?>
-      <a><img src="../image/icon1.png" style="width: 40px;margin-bottom:20px"></a>
-    <?php } else {
-      if ($_SESSION['user']['image']!="") {
-        $uploads="../uploadimg/".$_SESSION['user']['image'];
+    <?php 
+    if( isset($_SESSION['user']) ){
+      if ($_SESSION['user']['image']!="")
+      {
+       $uploads="../uploadimg/".$_SESSION['user']['image'];
       }else {
-        $uploads="../uploadimg/empty.jpg";
-      }
+       $uploads="../uploadimg/empty.jpg";
+     }
+    }
+      
      ?> 
      <div class="menu">
-      <a><img src="<?php echo $uploads; ?>" style="width: 40px;margin-bottom:10px;border-radius: 50%; HEIGHT: 40PX;OBJECT-FIT: cover;"></a>
-    <?php } ?>
-    
+      <a><img src="../image/icon1.png" style="width: 40px;margin-bottom:10px;border-radius: 50%; HEIGHT: 40PX;OBJECT-FIT: cover;"></a>
+
       <a class="lien" href="acceuil.php"><i class="fas fa-home"></i> Acceuil</a>
       <a class="lien"href="categorie.php"><i class="fab fa-blogger"></i> Catégories</a>
       <?php  if ( !isset($_SESSION["user"])) {?>
+        <a  class="lien" href="login.php"><i class="fas fa-plus-circle"></i>Ecrire article </a>
           <a class="lien" href="login.php"><i class="fas fa-sign-in-alt"></i> S'identifier</a>
           <a  class="lien" href="inscription.php"><i class="fas fa-prescription-bottle-alt"></i> S'inscrire</a>
+       
       <?php } else {?>
-          <a  class="lien" href="profil.php"><i class="fas fa-users"></i> Profil</a>
-          <a  class="lien" href="myblogs.php"><i class="fas fa-feather-alt"></i> My Blogs</a>
-          <a  class="lien" href="add_article.php"><i class="fas fa-plus-circle"></i> </a>
-          <a  class="lien" href="login.php"><i class="fas fa-sign-out-alt"></i> Déconnection</a>
+         
+          <a  class="lien" href="myblogs.php"><i class="fas fa-feather-alt"></i> Mes Blogs</a>
+          <a  class="lien" href="add_article.php"><i class="fas fa-plus-circle"></i>Ecrire article </a>
+          <a  class="lien" href="deconnecter.php"><i class="fas fa-sign-out-alt"></i> Déconnection</a>
+          <a  class="lien" href="profil.php"><img src="<?php echo $uploads; ?>" style="width: 40px;margin-bottom:10px;border-radius: 50%; HEIGHT: 40PX;OBJECT-FIT: cover;">Profil</a>
       <?php } ?>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>

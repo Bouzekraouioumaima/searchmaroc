@@ -5,6 +5,7 @@ include 'header.php';
 <!doctype html>
 <html>
 <head>
+<title>BLOG MAROC | CATEGORIE </title>
 <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"> 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap core css -->

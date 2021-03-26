@@ -1,22 +1,36 @@
 .card-body{
-    background-color: #d6d5b5;
+   /* background-color: #d6d5b5;*/
     padding: 28px;
     border-radius: 15px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 64%;
     transform: translate(-50%, -50%);
-    width: 40%;
-    height: 57%;
+    width: 71%;
     padding: 20px;
     /* background: red; */
     color: white;
     text-align: center;
-    box-shadow: 0 0 30px rgb(0 0 0 / 20%);
+   /* box-shadow: 0 0 30px rgb(0 0 0 / 20%);*/
 }
 body{
     background-image: url('../image/B2.jpg'); 
     background-size: cover;
+}
+body:before {
+    content: "";
+    background: #000000a1;
+    position: absolute;
+    width: 100%;
+    height: 123%;
+    /* top: -4%; */
+    /* LEFT: -18%; */
+}
+.titre_input{
+    color: #f8f9fa;
+    font-weight: bold;
+    font-family: system-ui;
+    font-size: 27px !important;
 }
 .form-group {
     margin: 6%;
@@ -48,13 +62,20 @@ label{
     border-radius: 5px;
 }
 .row {
-    display: contents !important;
+    display: flex !important;
+}
+.topnav {
+     position: absolute;
 }
 @media screen and (max-width: 600px) {
    
    .card-body{
-    top: 60%;
-    width: 90%;
-    height: 68%;
+    top:81%;
+    width: 90%!important;
+    height: 990px impo !important;
+    background: #013d1b;
    }
+   body:before {
+    height: 149%;
+}
   }

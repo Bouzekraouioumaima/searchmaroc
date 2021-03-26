@@ -1,3 +1,6 @@
+body:before {
+  height: 163%;
+}
 table {
        /* display: flex; */
        justify-content: center;
@@ -5,7 +8,7 @@ table {
        margin-left: 41px;
 }
 input[type=text], select {
-    width: 100%;
+    width: 87%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -14,9 +17,15 @@ input[type=text], select {
     box-sizing: content-box;
   }
   td {
-    font-size: 18px;
+    font-size: 20px;
+    color: #f7f7f7 !important;
+    font-weight: bold;
+    font-family: inherit;
 }
 
+div#editor {
+  margin: 37px;
+}
 .submit {
     width: 28%;
     background-color: #23922e;
@@ -36,4 +45,19 @@ input[type=text], select {
   }
   *[class*="grid-width"] {
     margin-bottom: 31px;
+}
+.tt {
+  font-size: 22px;
+  font-family: sans-serif;
+  FONT-WEIGHT: BOLD;
+  margin-top: 9px;
+
+}
+@media screen and (max-width: 600px) {
+  div#editor {
+    margin: 0;
+}
+.card-body{
+top: 75%!important;
+}
 }
