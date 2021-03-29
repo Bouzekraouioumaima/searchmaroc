@@ -58,8 +58,10 @@ label{
     font-family: auto;
     border: 0;
     padding: 6px;
-    width: auto;
+    
     border-radius: 5px;
+    position: relative;
+    
 }
 .row {
     display: flex !important;

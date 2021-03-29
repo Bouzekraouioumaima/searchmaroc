@@ -1,7 +1,20 @@
 <?php
 include 'header.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+   $position_arobase = strpos($_POST['email'], '@');
+   if ($position_arobase === false)
+       echo '<p>Votre email doit comporter un arobase.</p>';
+   else {
+      $headers="MIME-Version: 1.0" . "\r\n";
+      $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+      $headers .='From: ' . $_POST['email'];
+      $msg="<html><head></head><body><h1>Vous avez inscrie dans </h1><a href='lien'>bog maroc</a></body></html>";
+       $retour = mail($_POST['email'], "blog maroc", $msg, $headers);
+       if($retour)
+           echo '<p>Votre message a été envoyé.</p>';
+       else
+           echo '<p>Erreur.</p>';
+   }
   include 'functions.php';
   $functions= New functions();
   $functions->add();
@@ -82,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </div>
              
               <div class="d-grid gap-2 mt-4">
-                 <button class="btnn" type="submit">ENREGISTRER</button>
+                 <button class="btnn" type="submit" style="width: 56%;left: 22%;">ENREGISTRER</button>
               </div>
               <div class="d-grid gap-2 mt-4">
               <a href="login.php">Vous avez déjà un compte s'identifier d'ici .</a>

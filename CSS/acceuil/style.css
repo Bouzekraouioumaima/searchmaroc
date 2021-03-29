@@ -1670,3 +1670,19 @@ hr.invis3 {
     -o-border-radius: 50%;
     border-radius: 50%
 }
+.abn{
+    background-color: #013d1b;
+    color: white;
+    border: 0;
+    font-size: 22px;
+    padding: 5px;
+    margin-top: 22px;
+    margin-bottom: 20px;
+}
+.abn:hover{
+    background-color: #ab0505 ;
+   
+}
+.col-lg-8.pt-4.pt-lg-0.content {
+    margin-top: 4%;
+}

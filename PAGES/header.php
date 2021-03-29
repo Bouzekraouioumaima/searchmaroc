@@ -99,13 +99,12 @@ body {
         <a  class="lien" href="login.php"><i class="fas fa-plus-circle"></i>Ecrire article </a>
           <a class="lien" href="login.php"><i class="fas fa-sign-in-alt"></i> S'identifier</a>
           <a  class="lien" href="inscription.php"><i class="fas fa-prescription-bottle-alt"></i> S'inscrire</a>
-       
+          <a  class="lien" href="contact.php"><i class="fas fa-feather-alt"></i> Contacez-nous</a>
       <?php } else {?>
-         
-          <a  class="lien" href="myblogs.php"><i class="fas fa-feather-alt"></i> Mes Blogs</a>
           <a  class="lien" href="add_article.php"><i class="fas fa-plus-circle"></i>Ecrire article </a>
+          <a  class="lien" href="contact.php"><i class="fas fa-feather-alt"></i> Contacez-nous</a>
           <a  class="lien" href="deconnecter.php"><i class="fas fa-sign-out-alt"></i> Déconnection</a>
-          <a  class="lien" href="profil.php"><img src="<?php echo $uploads; ?>" style="width: 40px;margin-bottom:10px;border-radius: 50%; HEIGHT: 40PX;OBJECT-FIT: cover;">Profil</a>
+          <a  class="lien" href="profilaffichage.php"><img src="<?php echo $uploads; ?>" style="width: 40px;margin-bottom:10px;border-radius: 50%; HEIGHT: 40PX;OBJECT-FIT: cover;">Profil</a>
       <?php } ?>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>

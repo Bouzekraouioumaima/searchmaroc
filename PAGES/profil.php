@@ -25,8 +25,11 @@ img, svg {
     border-radius: 114px;
     height: 202px;
 }
+body:before {
+    height: 144%;
+    }
 </style>
-  }
+  
   </head>
   <body>
 
@@ -51,11 +54,7 @@ img, svg {
                               <input id="d" type="file" name="fileToUpload"  id="fileToUpload" >
                            </div>
                         </div>
-                        <div class="col-sm">
-                           <div class="d-grid gap-2 mt-4">
-                              <button id="c" class="btnn"  type="submit"><i class="fas fa-user-edit"></i></button>
-                           </div>
-                        </div>
+                       
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
@@ -100,12 +99,8 @@ img, svg {
                         </div>
                      </div>
                      <div class="row" style="padding-bottom: 47px;">
-                        <div class="col-sm-6">
-                           <div class="d-grid gap-2 mt-4">
-                              <button id="c" class="btnn"  type="submit"><i class="fas fa-user-edit"></i></button>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
+                        
+                        <div class="col-sm">
                            <div class="d-grid gap-2 mt-4">
                               <button id="d" class="btnn" type="submit" >Enregistrer</button>
                            </div>

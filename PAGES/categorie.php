@@ -25,6 +25,7 @@ include 'header.php';
 </head>
 <body>
 <section class="section first-section">
+            <h1 style="text-align:center; margin: 38px;font-size: 33px;font-family: unset;"> Toutes les catégories</h1>
             <div class="container-fluid">
                 <div class="masonry-blog clearfix">
                 <?php 
