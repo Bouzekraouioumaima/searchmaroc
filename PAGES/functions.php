@@ -70,7 +70,7 @@ class functions
     $test=mysqli_query($con, $sqltest);
     $row=mysqli_num_rows($test);
     if($row!=0){
-      header("Location: login.php");
+      header("Location: identifier.php?find=true");
       exit();
     }
     $sql = 'INSERT INTO user(nom, prenom,username,email,pass,image,date_naiss)
@@ -78,30 +78,12 @@ class functions
 
       if ($con->query($sql) === TRUE) {
            
-                header("Location: login.php");
+                header("Location: identifier.php");
                 exit();
           
       }
 }
-public function add_article()
-{
-  $con=mysqli_connect("localhost","root","","blog");
-  if ($con->connect_error) {
-      die("Connection failed: " . $con->connect_error);
-    }
-    $titre=$_POST['titre'];
-    $sous_titre=$_POST['sous_titre'];
-    $content=$_POST['editor'];
-    $utilisateur = 1;
-    $up='article';
-    $categorie=$_POST['categorie'];
-    $image=$this->uploadimg($up);
-    $sqll="INSERT INTO article ( titre,sous_titre,date_partage,id_utilisateur,id_categorie,texte,image_article) VALUES
-     ('$titre', '$sous_titre', current_timestamp(), '$utilisateur', '$categorie', '$content','$image')";
-   if ($con->query($sqll) === TRUE) {
-    echo "its added";
-    }else{echo 'erreur';}
-}
+
 public function info_uti($id)
 {
   $servername = "localhost";
@@ -144,15 +126,20 @@ public function profil($id)
   $image=$this->uploadimg($nom);
   if($_FILES['fileToUpload']['name'] != "")
   {
-    $image=$this->upload_utilisateur($nom);
+    
     $sql = 'update user set nom="'.$nom.'",prenom="'.$prenom.'",username="'.$username.'",email="'.$email.'",pass="'.$pass.'",image="'.$image.'",date_naiss="'.$date_naiss.'" where id="'.$id.'" ';
-
+    $res=mysqli_query($con,$sql);
+    return true;
   }else {
     $sql = 'update user set nom="'.$nom.'",prenom="'.$prenom.'",username="'.$username.'",email="'.$email.'",pass="'.$pass.'",date_naiss="'.$date_naiss.'" where id="'.$id.'" ';
+    $res=mysqli_query($con,$sql);
+    return true;
   }
     if ($con->query($sql) === TRUE) {
       //header("Refresh:0");
     }
 }
+
 }
+
  ?>

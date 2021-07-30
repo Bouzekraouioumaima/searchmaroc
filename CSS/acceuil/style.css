@@ -1,17 +1,4 @@
-/**************************************
-    Table of Content
 
-    1. BASIC
-    2. HEADER
-    3. SECTION
-    4. FOOTER
-    5. PAGES
-    6. BLOG
-    7. WIDGETS
-**************************************/
-
-/* BASIC
-**************************************/
 
 body {
     font-size: 15px;
@@ -50,8 +37,7 @@ h3:hover a,
 h4:hover a,
 h5:hover a,
 h6:hover a {
-    text-decoration: underline !important;
-    color: #111111 !important;
+    color: #0c4a61 !important;
 }
 
 h1 {
@@ -415,6 +401,7 @@ div.tab button:hover {
 }
 
 .first-section {
+    margin-top: 19px;
     padding: 0;
     border-bottom: 0;
 }
@@ -964,6 +951,7 @@ img.imgart {
 }
 
 .comments-list p {
+    margin-left: 37px;
     margin-bottom: 1rem
 }
 
@@ -1130,6 +1118,7 @@ img.imgart {
 }
 
 hr.invis {
+    width: 88% !important;
     border: 0;
     margin: 2rem 0;
 }
@@ -1188,10 +1177,8 @@ hr.invis3 {
     padding: 1rem 1.5rem;
 }
 
-.shadow-desc .blog-meta small::after,
-.shadow-desc .blog-meta a,
-.shadow-desc .blog-meta h4 a {
-    color: #ffffff !important;
+.shadow-desc .blog-meta small::after {
+    color: #020202 !important;
     
 }
 
@@ -1685,4 +1672,7 @@ hr.invis3 {
 }
 .col-lg-8.pt-4.pt-lg-0.content {
     margin-top: 4%;
+}
+img.img-fluid.comment {
+    height: 300px;
 }

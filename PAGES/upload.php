@@ -20,7 +20,7 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 
 			if (in_array($img_ex_lc, $allowed_exs)) {
 				$new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
-				$img_upload_path = '../uploadimg/'.$new_img_name;
+				$img_upload_path = '../img_article/'.$new_img_name;
 				move_uploaded_file($tmp_name, $img_upload_path);
 				session_start();
 				$titre=$_POST['titre'];
@@ -35,11 +35,11 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
 					$idcategorie=$resultat['id'];
 				}
 				$sqll="INSERT INTO article ( titre,sous_titre,id_utilisateur,id_categorie,texte,image_article) VALUES
-				( '$titre', '$sous_titre','$utilisateur', '$idcategorie','$description','$image')";
+				( '$titre', '$sous_titre',1,1,'$description','$image')";
 				if(mysqli_query($con,$sqll)){
-					header("Location: acceuil.php");
+					header("Location: acceuil.php?azer");
 				}else{
-					header("Location: add_article.php?$idcategorie");
+					header("Location: add_article.php?$description");
 				}
 		    }
 		}

@@ -110,7 +110,7 @@ p,
 .topbar-section a:focus,
 .topbar-section a,
 .topbar-section i {
-	color:#ffffff !important; 
+	color:#000000 !important; 
 }
 
 .footer {
@@ -132,8 +132,8 @@ p,
 .page-link,
 .topbar-section {
 	color:#ffffff !important;
-	background-color: #013d1b  !important;
-	border-color: #013d1b  !important;
+	background-color: #abdff0  !important;
+	border-color: #abdff0  !important;
 }
 
 img.img-inta {
@@ -149,7 +149,7 @@ a:focus,
 .navbar-nav .nav-link.active.color-green-hover,
 .navbar-nav .nav-link.color-green-hover:hover,
 .navbar-nav .nav-link.color-green-hover:focus {
-    color: #ab0505 !important;
+    color: #f06c34 !important;
     text-decoration: none;
 }
 @media (max-width: 1156px) {
