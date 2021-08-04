@@ -18,7 +18,17 @@ include 'nav.php';
   <!-- DataTables -->
   <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <style>
+    a{
+      color: black;
+    }
+    a:hover{
+      color: gray;
+    }
+    .card {
+    width: 143%;
+    }
+    </style>
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
@@ -47,7 +57,6 @@ include 'nav.php';
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>id</th>
                     <th>Titre</th>
                     <th>Sous titre(s)</th>
                     <th>Image</th>
@@ -64,13 +73,12 @@ include 'nav.php';
                     while($resultat = mysqli_fetch_assoc($res)){
                     ?>
                   <tr>
-                    <td><a href="article.php?idart_pub=<?= $resultat['idart']?>"><?= $resultat['idart'];?></a></td>
                     <td><a href="article.php?idart_pub=<?= $resultat['idart']?>"><?= $resultat['titre'];?></a> </td>
                     <td><a href="article.php?idart_pub=<?= $resultat['idart']?>"><?= $resultat['sous_titre'];?></a></td>
                     <td> <a href="article.php?idart_pub=<?= $resultat['idart']?>"><img src="../img_article/<?= $resultat['image_article']?>" style="    width: 224px; height: 227px;" ></a></td>
                     <td><a href="article.php?idart_pub=<?= $resultat['idart']?>"><?= substr($resultat['texte'], 0, 200);?>...</a></td>
                     <td><a href="profile.php?id_user=<?= $resultat['id']?>"><?= $resultat['username'];?></a></td>
-                    <td><?= $resultat['date_partage'];?></td>
+                    <td><?php $r=$resultat['date_partage']; echo date("Y/m/d", strtotime("$r"))?></td>
                     <td><?= $resultat['type'];?></td>
                   </tr>
                   <?php } ?>

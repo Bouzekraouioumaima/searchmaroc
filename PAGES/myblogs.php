@@ -36,11 +36,7 @@ include('nbr_onligne.php');
 
     <!-- Version Garden CSS for this template -->
     <link href="../css/acceuil/garden.css" rel="stylesheet">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=610a974bc02a980019717e31&product=inline-share-buttons" async="async"></script>
 
 </head>
 <body>
@@ -85,10 +81,9 @@ include('nbr_onligne.php');
                                 </div><!-- end pp -->
 
                             </div><!-- end content -->
-
+                            <div class="sharethis-inline-share-buttons"></div>
                             <div class="blog-title-area">
                                 <div class="post-sharing">
-                                <div class="fb-share-button" data-href="http://localhost/BLOG/PAGES/myblogs.php" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%2FBLOG%2FPAGES%2Fmyblogs.php%3Fidart%3D1&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager</a></div>
                                 </div><!-- end post-sharing -->
                             </div><!-- end title -->
                             <hr class="invis1">

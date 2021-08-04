@@ -91,6 +91,7 @@ include 'nav.php';
                 <img class="img-fluid pad img_art" src="../img_article/<?=$images['image_article']?>" alt="Photo">
                 <h4><?=$images['sous_titre'] ?></h4>
                 <p><?= $images['texte']?></p>
+                <button>supprimer</button>
                 <?php
                 $sql="SELECT count(*) as nb FROM action WHERE id_article =".$_GET['idart_pub'];
                 $res=mysqli_query($con,$sql);

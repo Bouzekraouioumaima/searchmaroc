@@ -39,6 +39,8 @@ include('nbr_onligne.php');
   color: #0c4a61 !important;
     }
     </style>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=610a974bc02a980019717e31&product=inline-share-buttons" async="async"></script>
+
 </head>
 <body>
 
@@ -196,10 +198,7 @@ include('nbr_onligne.php');
                             <div class="widget">
                                 <h2 class="widget-title">Contactez nous</h2>
                                 <div class="instagram-wrapper clearfix">
-                                    <a href="https://www.facebook.com/Search_website-106514364908222"><img src="../image/fb.jpg"  alt="" class="img-inta"></a>
-                                    <a href="https://www.instagram.com/search_website/"><img src="../image/instagram.jpg" alt="" class="img-inta"></a>
-                                    <a href="mailto:searchwebsite01@gmail.com"><img src="../image/email.png"  alt="" class="img-inta"></a>
-                                    <a href="https://wa.me/00212619360008"><img src="../image/whatssap.jpg"  alt="" class="img-inta"></a>
+                                <div class="sharethis-inline-share-buttons"></div>
                                      </div><!-- end Instagram wrapper -->
                             </div><!-- end widget -->
                         </div><!-- end sidebar -->

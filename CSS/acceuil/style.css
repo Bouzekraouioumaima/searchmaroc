@@ -37,7 +37,8 @@ h3:hover a,
 h4:hover a,
 h5:hover a,
 h6:hover a {
-    color: #0c4a61 !important;
+    color: #f06c34!important;
+    text-decoration: revert !important;
 }
 
 h1 {

@@ -1,6 +1,6 @@
 <style>
     .fixed-bottom {
-    background-color: #f06c34 !important;
+    background-color: #669bbc !important;
     position: initial !important;
     }
     .text-center .p-3 a:hover{
@@ -15,7 +15,7 @@ color:#0c4a61 !important;
 <footer class="text-center text-white fixed-bottom" style="background-color: #21081a;">
   <!-- Grid container -->
   <div class="container p-4">
-  <img src="https://img.icons8.com/windows/32/000000/search--v1.png" style="width: 34px; height: 34px;"/><div class="logo">SEARCH</div>
+  <img src="https://img.icons8.com/windows/32/000000/search--v1.png" style="width: 34px; height: 34px;"/><div class="logo">SEARCH-MAROC</div>
   </div>
   <!-- Grid container -->
 

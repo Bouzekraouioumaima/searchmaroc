@@ -15,7 +15,7 @@ body {
 }
 
 .topnav {
-  background-color: #f06c34;
+  background-color: #669bbc;
   width: 100%;
   height: 58px;
   z-index: 99;
@@ -46,9 +46,9 @@ body {
     justify-content: center;
 }
 .logo{
-  color: #0c4a61;
+  color: #ee9b00;
     font-size: 30px;
-    font-family: 'FontAwesome';
+    font-family: fantasy;
 }
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
@@ -96,7 +96,7 @@ body {
       
      ?> 
      <div class="menu">
-      <a href="acceuil.php" style="display: flex;"><img src="https://img.icons8.com/windows/32/000000/search--v1.png" style="width: 34px; height: 34px;"/><div class="logo">SEARCH</div></a>
+      <a href="acceuil.php" style="display: flex;"><img src="https://img.icons8.com/windows/32/000000/search--v1.png" style="width: 34px; height: 34px;"/><div class="logo">SEARCH-MAROC</div></a>
 
       <a class="lien p1" href="acceuil.php"> Acceuil</a>
       <a class="lien P2"href="categorie.php">Catégories</a>
