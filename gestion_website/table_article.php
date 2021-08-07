@@ -68,7 +68,7 @@ include 'nav.php';
                   </thead>
                   <tbody>
                     <?php
-                    $sql="select *, article.id as idart from article join user on article.id_utilisateur = user.id join categorie on categorie.id=article.id_categorie";
+                    $sql="select *, article.id as idart, user.id as id_user from article join user on article.id_utilisateur = user.id join categorie on categorie.id=article.id_categorie";
                     $res=mysqli_query($con,$sql);
                     while($resultat = mysqli_fetch_assoc($res)){
                     ?>
@@ -77,7 +77,7 @@ include 'nav.php';
                     <td><a href="article.php?idart_pub=<?= $resultat['idart']?>"><?= $resultat['sous_titre'];?></a></td>
                     <td> <a href="article.php?idart_pub=<?= $resultat['idart']?>"><img src="../img_article/<?= $resultat['image_article']?>" style="    width: 224px; height: 227px;" ></a></td>
                     <td><a href="article.php?idart_pub=<?= $resultat['idart']?>"><?= substr($resultat['texte'], 0, 200);?>...</a></td>
-                    <td><a href="profile.php?id_user=<?= $resultat['id']?>"><?= $resultat['username'];?></a></td>
+                    <td><a href="profile.php?id_user=<?= $resultat['id_user']?>"><?= $resultat['username'];?></a></td>
                     <td><?php $r=$resultat['date_partage']; echo date("Y/m/d", strtotime("$r"))?></td>
                     <td><?= $resultat['type'];?></td>
                   </tr>

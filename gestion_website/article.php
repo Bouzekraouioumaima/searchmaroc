@@ -27,6 +27,13 @@ include 'nav.php';
     margin-left: auto;
     margin-right: auto;
     }
+    .buttonsupp{
+      COLOR: white;
+        background-color: red;
+        padding: 11px;
+        border-radius: 9px;
+    }
+
   </style>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -53,7 +60,7 @@ include 'nav.php';
               <div class="card-header">
                 <div class="user-block">
                   <?php 
-                  $sql = "SELECT * FROM article  JOIN categorie  on article.id_categorie= categorie.id JOIN user on article.id_utilisateur= user.id  where article.id=".$_GET['idart_pub'];
+                  $sql = "SELECT *,article.id as idarticle FROM article  JOIN categorie  on article.id_categorie= categorie.id JOIN user on article.id_utilisateur= user.id  where article.id=".$_GET['idart_pub'];
                   $res = mysqli_query($con,  $sql);
                   if (mysqli_num_rows($res) > 0) { 
                       $images = mysqli_fetch_assoc($res);
@@ -67,8 +74,9 @@ include 'nav.php';
                     $uploads="../uploadimg/empty.jpg";
                   }
                   ?>
+                 
                   <img class="img-circle" src="<?= $uploads;?>" alt="User Image">
-                  <span class="username"><a href="#"><?=$images['username']?></a></span>
+                  <span class="username"><a href="profile.php?id_user=<?= $images['id']?>"><?=$images['username']?></a></span>
                   <span class="description">Partagé publiquement-<?php $d=$images['date_partage']; echo date("Y/m/d", strtotime("$d"))?></span>
                 </div>
                 <!-- /.user-block -->
@@ -91,7 +99,7 @@ include 'nav.php';
                 <img class="img-fluid pad img_art" src="../img_article/<?=$images['image_article']?>" alt="Photo">
                 <h4><?=$images['sous_titre'] ?></h4>
                 <p><?= $images['texte']?></p>
-                <button>supprimer</button>
+                <button  class="buttonsupp" onclick ="myFunction()">Supprimer</button>
                 <?php
                 $sql="SELECT count(*) as nb FROM action WHERE id_article =".$_GET['idart_pub'];
                 $res=mysqli_query($con,$sql);
@@ -148,5 +156,14 @@ include 'nav.php';
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+<script>
+    function myFunction(){
+      var aler =confirm ("tu veux vraiment supprimer cette article");
+      if(aler == true){
+        window.location.href = "supprimerarticle.php?id="+<?= $_GET['idart_pub']; ?> +"&page=article";
+      }
+     
+    }
+</script>
 </body>
 </html>
